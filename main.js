@@ -1,5 +1,3 @@
-
-
 const customName = document.getElementById('customname');
 const randomize = document.querySelector('.randomize');
 const story = document.querySelector('.story');
@@ -16,8 +14,8 @@ let insertY = ['the soup kitchen', 'Disneyland', 'the White House'];
 let insertZ = ['spontaneously combusted', 'melted into a puddle on the sidewalk', 'turned into a slug and crawled away'];
     
 newStory = storyText.replace(':insertx:', insertX[0, 1, 2]);  
-newStory = storyText.replace(':inserty:', insertY[0, 1, 2];
-newStory = storyText.replace(':insertz:', insertZ[0. 1, 2]; 
+newStory = storyText.replace(':inserty:', insertY[0, 1, 2]);
+newStory = storyText.replace(':insertz:', insertZ[0. 1, 2]); 
     
         
 randomize.addEventListener('click', result);
@@ -46,3 +44,6 @@ randomValueFromArray(insertX);
   story.textContent = newStory;
   story.style.visibility = 'visible';
 }
+
+console.log(newStory)
+
