@@ -11,26 +11,25 @@ function randomValueFromArray(array){
 
 function result() {
 
-let storyText = 'It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.';
+  let storyText = 'It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.';
+
+
+  let insertX = ['Willy the Goblin', 'Big Daddy', 'Father Christmas'];
+  let insertY = ['the soup kitchen', 'Disneyland', 'the White House'];
+  let insertZ = ['spontaneously combusted', 'melted into a puddle on the sidewalk', 'turned into a slug and crawled away'];
+      
+  let newStory = storyText;
 
 
 
-let insertX = ['Willy the Goblin', 'Big Daddy', 'Father Christmas'];
-let insertY = ['the soup kitchen', 'Disneyland', 'the White House'];
-let insertZ = ['spontaneously combusted', 'melted into a puddle on the sidewalk', 'turned into a slug and crawled away'];
-    
-let newStory = storyText;
-
-newStory = newStory.replace(':insertx:', xItem);
-newStory = storyText.replace(':inserty:', yItem);
-newStory = storyText.replace(':insertz:', zItem); 
-    
-
-let xItem = randomValueFromArray(insertX);
-let yItem = randomValueFromArray(insertY);
-let zItem = randomValueFromArray(insertZ);
-        
-randomize.addEventListener('click', result);
+  let xItem = randomValueFromArray(insertX);
+  let yItem = randomValueFromArray(insertY);
+  let zItem = randomValueFromArray(insertZ);
+          
+  newStory = newStory.replace(':insertx:', xItem);
+  newStory = newStory.replace(':inserty:', yItem);
+  newStory = newStory.replace(':insertz:', zItem); 
+      
 
 
   if(customName.value !== '') {
@@ -48,9 +47,12 @@ randomize.addEventListener('click', result);
 
   story.textContent = newStory;
   story.style.visibility = 'visible';
-
+  console.log(newStory);
 }
 
+
+
+randomize.addEventListener('click', result);
 
 
 
