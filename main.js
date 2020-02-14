@@ -27,12 +27,13 @@ let newStory = storyText;
 let xItem = randomValueFromArray;
 let yItem = randomValueFromArray;
 let zItem = randomValueFromArray;
+}
 
 randomValueFromArray(insertX);
 
   if(customName.value !== '') {
     let name = customName.value;
-    storyText = storyText.replace('Bob', name);
+    newStory = newStory.replace('Bob', name);
 
   }
 
@@ -42,6 +43,6 @@ randomValueFromArray(insertX);
 
   }
 
-  story.textContent = ;
+  story.textContent = newStory;
   story.style.visibility = 'visible';
 }
