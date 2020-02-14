@@ -7,48 +7,50 @@ function randomValueFromArray(array){
   return array[random];
 }
 
+
+
+function result() {
+
 let storyText = 'It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.';
+
+
 
 let insertX = ['Willy the Goblin', 'Big Daddy', 'Father Christmas'];
 let insertY = ['the soup kitchen', 'Disneyland', 'the White House'];
 let insertZ = ['spontaneously combusted', 'melted into a puddle on the sidewalk', 'turned into a slug and crawled away'];
     
-newStory = storyText.replace(':insertx:', insertX);
-newStory[0];
-newStory[1];
-newStory[2]; 
-/*newStory = storyText.replace(':inserty:', insertY[0, 1, 2]);
-newStory = storyText.replace(':insertz:', insertZ[0. 1, 2]); */
+let newStory = storyText;
+
+let newStory = newStory.replace(':insertx:', xItem);
+let newStory = storyText.replace(':inserty:', yItem);
+let newStory = storyText.replace(':insertz:', zItem); 
     
+
+let xItem = randomValueFromArray(insertX);
+let yItem = randomValueFromArray(insertY);
+let zItem = randomValueFromArray(insertZ);
         
 randomize.addEventListener('click', result);
 
-function result() {
-let newStory = storyText;
-let xItem = randomValueFromArray;
-let yItem = randomValueFromArray;
-let zItem = randomValueFromArray;
-}
-
-randomValueFromArray(insertX);
 
   if(customName.value !== '') {
     let name = customName.value;
-    newStory = newStory.replace('Bob', name);
+    let newStory = newStory.replace('Bob', name);
 
   }
 
   if(document.getElementById("uk").checked) {
     let weight = Math.round(300 / 14) + ' stone';
     let temperature =  Math.round((94 - 32) * (5 / 9)) + ' centigrade';
-    newStory = newStory.replace('300 pounds', weight);
-    newStory = newStory.replace('94 degrees', temperature);
-
+    let newStory = storyText.replace('300 pounds', weight);
+    let newStory = storyText.replace('94 degrees', temperature);
   }
 
   story.textContent = newStory;
   story.style.visibility = 'visible';
+
 }
+
 
 
 
