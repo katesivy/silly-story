@@ -13,9 +13,12 @@ let insertX = ['Willy the Goblin', 'Big Daddy', 'Father Christmas'];
 let insertY = ['the soup kitchen', 'Disneyland', 'the White House'];
 let insertZ = ['spontaneously combusted', 'melted into a puddle on the sidewalk', 'turned into a slug and crawled away'];
     
-newStory = storyText.replace(':insertx:', insertX[0, 1, 2]);  
-newStory = storyText.replace(':inserty:', insertY[0, 1, 2]);
-newStory = storyText.replace(':insertz:', insertZ[0. 1, 2]); 
+newStory = storyText.replace(':insertx:', insertX);
+newStory[0];
+newStory[1];
+newStory[2]; 
+/*newStory = storyText.replace(':inserty:', insertY[0, 1, 2]);
+newStory = storyText.replace(':insertz:', insertZ[0. 1, 2]); */
     
         
 randomize.addEventListener('click', result);
@@ -36,8 +39,10 @@ randomValueFromArray(insertX);
   }
 
   if(document.getElementById("uk").checked) {
-    let weight = Math.round(300);
-    let temperature =  Math.round(94);
+    let weight = Math.round(300 / 14) + ' stone';
+    let temperature =  Math.round((94 - 32) * (5 / 9)) + ' centigrade';
+    newStory = newStory.replace('300 pounds', weight);
+    newStory = newStory.replace('94 degrees', temperature);
 
   }
 
@@ -45,5 +50,5 @@ randomValueFromArray(insertX);
   story.style.visibility = 'visible';
 }
 
-console.log(newStory)
+
 
